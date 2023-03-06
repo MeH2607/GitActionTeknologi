@@ -1,0 +1,30 @@
+name: test hello world 
+
+on: 
+  push:
+    branches: 
+      -'main'
+
+jobs: 
+  test_hello: 
+    name: test hello
+    runs-on: ubuntu-latest 
+
+    step: 
+    - name: Checkout
+      uses: actions/checkout@v3
+
+      name: test if file exsist
+      uses: andstor/file-existence-action@v2
+      with: 
+        file: "hello_world.txt"
+      
+      name: test inside file
+      uses: ubuntu-latest
+        run: |
+          contains(cat hello_world.txt, 'Hello World')
+      
+      name: push changes 
+        if: succes()
+        run: |
+          git 
