@@ -18,6 +18,7 @@ Bedste måde at gøre det på er at bruge en packet manager<br>
   ```choco install gradle```
   > Mac brugere øøøh, idunno :broken_heart:
 </p> <br>
+
 ### Hvordan ville i så konvertere programmet??!? <br>
   > Det burde være simpelt nok haha...
 <p>
@@ -37,54 +38,57 @@ dependencies{
     <br>
 </p>
 
-##FIK I GJORT NOGET OM GITHUB ACTIONS OVERHOVEDET?? :skull::skull::skull:
-    ### Kinda
-    <p>
-    Vi lavede et script der opretter en fil der siger "hello world".<br>
-    Derefter begyndte vi at lave en yml fil der tester den er oprettet ordentligt!<br>
-    Vores YML fil ser sådan her ud:<br>
+## FIK I GJORT NOGET OM GITHUB ACTIONS OVERHOVEDET?? :skull::skull::skull:
+### Kinda
+<p>
+  
+Vi lavede et script der opretter en fil der siger "hello world".<br>
+Derefter begyndte vi at lave en yml fil der tester den er oprettet ordentligt!<br>
+Vores YML fil ser sådan her ud: </p><br>
       <code>
+        
       name: test hello world 
 
-on: 
-  push:
-    branches: 
-      -'main'
+      on: 
+        push:
+          branches: 
+            -'main'
 
-jobs: 
-  test_hello: 
-    name: test hello
-    runs-on: ubuntu-latest 
+        jobs: 
+          test_hello: 
+            name: test hello
+            runs-on: ubuntu-latest 
 
-    step: 
-    - name: Checkout
-      uses: actions/checkout@v3
+        step: 
+        - name: Checkout
+          uses: actions/checkout@v3
 
-      name: test if file exsist
-      uses: andstor/file-existence-action@v2
-      with: 
-        file: "hello_world.txt"
-      
-      name: test inside file
-      uses: ubuntu-latest
-        run: |
-          contains(cat hello_world.txt, 'Hello World')
-      
-      name: push changes 
-        if: succes()
-        run: |
-          git 
+          name: test if file exsist
+          uses: andstor/file-existence-action@v2
+          with: 
+            file: "hello_world.txt"
+
+          name: test inside file
+          uses: ubuntu-latest
+            run: |
+              contains(cat hello_world.txt, 'Hello World')
+
+          name: push changes 
+            if: succes()
+            run: |
+              git 
       </code>
-      <ul>
-    <li>**on: push: branches: 'main'** siger at koden kører når der bliver pushed til main</li>
-        <li>**step: -name: chekout uses actions/checkout@v3** lader filen få adgang til repositoriet</li>
-        <li>**test if file exists** tjekker at filen "hello_world.txt" eksisterer</li>
-        <li>**test inside files** tester at der står "Hello World" inde i filen</li>
-        <li>**push changes** pusher filen hvis de to test er succesfulde</li>
-    </ul>
-    </p>
-    <br><br>
-    ##All in all, vi prøvede vores bedste, det var en god lære oplevelse
+
+* **on: push: branches: 'main'** siger at koden kører når der bliver pushed til main
+* **step: -name: chekout uses actions/checkout@v3** lader filen få adgang til repositoriet
+* **test if file exists** tjekker at filen "hello_world.txt" eksisterer
+* **test inside files** tester at der står "Hello World" inde i filen
+* **push changes** pusher filen hvis de to test er succesfulde
+
+
+<br><br>
+
+## All in all, vi prøvede vores bedste, det var en god lære oplevelse
 
 
 <br><br><br><br><br><br><br>
