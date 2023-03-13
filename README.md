@@ -92,5 +92,5 @@ Vores YML fil ser sådan her ud: </p><br>
 
 
 <br><br><br><br><br><br><br>
-# In the land of the bli... BOY THIS GUY IS BLIND 
+# In the land of the blind
 <img src=https://cdn.britannica.com/66/103166-050-9423AD02/Stevie-Wonder.jpg>
