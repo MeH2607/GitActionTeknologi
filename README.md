@@ -38,7 +38,7 @@ dependencies{
     <br>
 </p>
 
-## FIK I GJORT NOGET OM GITHUB ACTIONS OVERHOVEDET?? :skull::skull::skull:
+## FIK I LAVET NOGET GITHUB ACTIONS OVERHOVEDET?? :skull::skull::skull:
 ### Kinda
 <p>
   
