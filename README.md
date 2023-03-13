@@ -4,7 +4,7 @@
 ### Hvordan ville man egentlig gøre det??? <br>
 
 #### Du vil starte med at installere gradle.<br>
-<p>
+
 Bedste måde at gøre det på er at bruge en packet manager<br>
 <ul>
   <li>For Windows er det anbefalet at bruge Chocolattey :yum:</li><br>
@@ -17,7 +17,7 @@ Bedste måde at gøre det på er at bruge en packet manager<br>
   Herfra kan man installere Gradle direkte fra command prompt ved at skrive<br>
   ```choco install gradle```
   > Mac brugere øøøh, idunno :broken_heart:
-</p> <br>
+ <br>
 
 ### Hvordan ville i så konvertere programmet??!? <br>
   > Det burde være simpelt nok haha...
